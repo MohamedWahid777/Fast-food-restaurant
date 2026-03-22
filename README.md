@@ -19,7 +19,8 @@ Open `index.html` directly in your browser — no server needed.
 | 🌍 Bilingual (EN / AR) | Full English ↔ Arabic switch, correct RTL layout for Arabic |
 | 📱 Responsive Design | Mobile-first, tablet-optimized, desktop-polished |
 | 🍔 Menu Filter | Filter by All / Burgers / Sides / Combos / Drinks |
-| 🛒 Add to Order Toast | Interactive feedback when adding items |
+| 🛒 Shopping Cart | Full panel with quantity controls, total calculation, and persistent storage |
+| 📧 Order System | AJAX-based order submission via FormSubmit.co integration |
 | 🎞️ Scroll Animations | Intersection Observer-powered fade-in effects |
 | ♿ Accessibility | ARIA labels, `focus-visible` styles, reduced-motion support |
 
@@ -28,11 +29,11 @@ Open `index.html` directly in your browser — no server needed.
 ## 📄 Required Sections
 
 1. **Hero** – Cinematic full-screen food image, headline, Order Now + View Menu CTAs, quick stats  
-2. **Menu** – 6 items (burgers, sides, combos, drinks) with filter tabs and hover effects  
+2. **Menu** – 12 items (burgers, sides, combos, drinks) with filter tabs and hover effects  
 3. **About** – Brand story with floating stat card  
-4. **Why Choose Us** – 5 differentiator cards with icon micro-animations  
-5. **Customer Reviews** – 5 realistic testimonials, featured card highlight  
-6. **Location** – Text-based: 3 branch addresses, delivery zones, working hours table, contact info  
+4. **Why Choose Us** – 4 differentiator cards with icon micro-animations  
+5. **Customer Reviews** – 4 realistic testimonials, featured card highlight  
+6. **Location** – Text-based: Working hours table, delivery info, and direct contact (phone/email)
 7. **Footer** – Social links, quick nav, menu highlights, copyright  
 
 > ⚠️ **No map embed** — replaced with a clean text-based location block as required.  
@@ -47,6 +48,7 @@ Open `index.html` directly in your browser — no server needed.
 | Structure | HTML5 (semantic) |
 | Styling | CSS3 – Custom Properties, Flexbox, Grid |
 | Logic | Vanilla JavaScript (ES6+, IIFE) |
+| Backend | FormSubmit.co (AJAX Order Processing) |
 | Fonts | Google Fonts – Outfit (EN) + Cairo (AR) |
 | Images | AI-generated premium food photography |
 
@@ -146,6 +148,9 @@ python -m http.server 8000
 ### Change Brand Name
 Search and replace `BurgerRush` / `برغر راش` in `index.html`.
 
+### Change Contact Info
+Update the phone number and email address in the `contact` section of `index.html` and the FormSubmit endpoint in `script.js`.
+
 ### Change Colors
 Edit `--accent`, `--accent-light`, `--accent-dark` in `:root` inside `styles.css`.
 
@@ -168,4 +173,4 @@ Extend the `applyLanguage()` function in `script.js` and add corresponding `data
 
 ---
 
-*© 2025 BurgerRush. Built for portfolio & real deployment.*
+*© 2026 BurgerRush. Built for portfolio & real deployment.*
