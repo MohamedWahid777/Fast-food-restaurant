@@ -614,7 +614,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -912,7 +912,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -988,8 +988,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .review-card {
@@ -1070,7 +1070,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -1375,11 +1375,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   :root {
     --nav-h: 64px;
   }
+  .nav-container {
+    display: flex;
+  justify-content: center;
+  justify-content: space-between;
 
+
+  }
   .nav-links {
     display: none;
     position: fixed;
@@ -1410,13 +1416,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     border-bottom: none;
   }
 
+  .nav-links li.mobile-only {
+    display: block;
+  }
+
+  .nav-links .nav-link-cta {
+    background: var(--accent);
+    color: #fff !important;
+    text-align: center;
+    font-weight: 700;
+    margin: 1rem var(--space-lg);
+    border-radius: var(--radius-md);
+    border-bottom: none;
+  }
+
   .nav-links a::after { display: none; }
 
   .hamburger {
     display: flex;
   }
 
-  .nav-cta { display: none; }
+  .nav-cta {
+    display: none;
+  }
 
   /* Hero */
   .hero-content {
@@ -1445,7 +1467,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   /* Menu grid */
   .menu-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* About */
@@ -1481,17 +1503,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   /* Why */
   .why-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Reviews */
   .reviews-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Contact */
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Footer */
@@ -1521,6 +1543,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   .container {
     padding: 0 1.25rem;
+  }
+
+  /* Force 1 column on mobile breakpoint 600px */
+  @media (max-width: 600px) {
+    .menu-grid, .why-grid, .reviews-grid, .contact-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -2048,4 +2077,84 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+/* ══════════════════════════════
+   21. MOBILE DRAWER ACTIONS
+══════════════════════════════ */
+.mobile-nav-actions {
+  display: none;
+  border-top: 1px solid var(--border);
+  padding: 1.5rem var(--space-lg);
+  margin-top: 1rem;
+}
+
+.mobile-toggles {
+  display: flex !important;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-toggle.sm,
+.theme-toggle.sm {
+  height: 48px;
+  flex: 1;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+}
+
+.theme-icon-mirror {
+  font-size: 1.3rem;
+}
+
+/* ══════════════════════════ Breakpoints ══════════════════════════ */
+@media (max-width: 900px) {
+  .mobile-nav-actions {
+    display: block !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 0.75rem;
+  }
+  .nav-actions {
+    gap: 0.5rem;
+  }
+  .logo-text { font-size: 1.1rem; }
+}
+
+@media (max-width: 900px) {
+  /* AGGRESSIVE HIDE FOR HEADER: IDs are strong, but !important is stronger */
+  .navbar .nav-actions #langToggle,
+  .navbar .nav-actions #themeToggle {
+    display: none !important;
+  }
+
+  .nav-container {
+    padding: 0 0.6rem;
+  }
+
+  .nav-actions {
+    gap: 0.6rem;
+    margin-left: 0;
+  }
+
+  .cart-btn, .hamburger {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logo-text { font-size: 1rem; }
+}
+
+@media (max-width: 380px) {
+  .logo-text { font-size: 1rem; }
+  .logo-icon { font-size: 1.15rem; }
 }

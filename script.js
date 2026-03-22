@@ -51,7 +51,10 @@
   // ══════════════════════════════
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
-    themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    const iconStr = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelectorAll('.theme-icon, .theme-icon-mirror').forEach(el => {
+      el.textContent = iconStr;
+    });
     localStorage.setItem('brTheme', theme);
     currentTheme = theme;
   }
@@ -75,9 +78,11 @@
       el.textContent = lang === 'ar' ? arText : enText;
     });
 
-    // Update nav lang label
-    const labelEl = document.getElementById('langLabel');
-    if (labelEl) labelEl.textContent = lang === 'ar' ? 'AR' : 'EN';
+    // Update nav lang label (header + mobile drawer)
+    const labelStr = lang === 'ar' ? 'AR' : 'EN';
+    document.querySelectorAll('#langLabel, .lang-label-mirror').forEach(el => {
+      el.textContent = labelStr;
+    });
     
     localStorage.setItem('brLang', lang);
     currentLang = lang;
