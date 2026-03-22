@@ -1,753 +1,1538 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr" data-theme="dark" data-lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BurgerRush – Fast food done right. Order fresh burgers, crispy fries, and loaded combos delivered to your door. Fast, bold, and unforgettable." />
-  <meta name="keywords" content="fast food, burgers, fries, chicken, combo meals, delivery, fast food restaurant" />
-  <title>BurgerRush – Fast Food Done Right</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BurgerRush – Fast food done right. Order fresh burgers, crispy fries, and loaded combos delivered to your door. Fast, bold, and unforgettable."
+    />
+    <meta
+      name="keywords"
+      content="fast food, burgers, fries, chicken, combo meals, delivery, fast food restaurant"
+    />
+    <title>BurgerRush – Fast Food Done Right</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">
+          <span class="logo-text" data-en="BurgerRush" data-ar="برغر راش"
+            >BurgerRush</span
+          >
+        </a>
 
-  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <span class="logo-icon">🔥</span>
-        <span class="logo-text" data-en="BurgerRush" data-ar="برغر راش">BurgerRush</span>
-      </a>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#menu" data-en="Menu" data-ar="القائمة">Menu</a></li>
-        <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
-        <li><a href="#why-us" data-en="Why Us" data-ar="لماذا نحن">Why Us</a></li>
-        <li><a href="#reviews" data-en="Reviews" data-ar="التقييمات">Reviews</a></li>
-        <li><a href="#contact" data-en="Location" data-ar="الموقع">Location</a></li>
-        <li class="mobile-only"><a href="#menu" class="nav-link-cta" data-en="Order Now" data-ar="اطلب الآن">Order Now</a></li>
-        <li class="mobile-nav-actions">
-          <div class="mobile-toggles">
-            <!-- Language Toggle (Mirrored) -->
-            <button class="lang-toggle sm" onclick="document.getElementById('langToggle').click()">
-              <span class="lang-en lang-label-mirror">EN</span>
-              <span class="lang-divider">|</span>
-              <span class="lang-ar">AR</span>
-            </button>
-            <!-- Theme Toggle (Mirrored) -->
-            <button class="theme-toggle sm" onclick="document.getElementById('themeToggle').click()">
-              <span class="theme-mirror-icon theme-icon-mirror">☀️🌙</span>
-            </button>
-          </div>
-        </li>
-      </ul>
-
-      <div class="nav-actions">
-        <!-- Language Toggle -->
-        <button class="lang-toggle" id="langToggle" aria-label="Toggle Language">
-          <span class="lang-en" id="langLabel">EN</span>
-          <span class="lang-divider">|</span>
-          <span class="lang-ar">AR</span>
-        </button>
-
-        <!-- Dark/Light Mode Toggle -->
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
-          <span class="theme-icon" id="themeIcon">☀️</span>
-        </button>
-
-        <!-- Order Now CTA (nav) -->
-        <a href="#menu" class="nav-cta" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
-
-        <!-- Cart Button -->
-        <button class="cart-btn" id="cartBtn" aria-label="Open cart" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="20" height="20"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          <span class="cart-count" id="cartCount">0</span>
-        </button>
-
-        <!-- Hamburger -->
-        <button class="hamburger" id="hamburger" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <img src="hero_burger.png" alt="BurgerRush signature burger" class="hero-img" loading="eager" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge" data-en="🔥 Fresh • Fast • Legendary" data-ar="🔥 طازج • سريع • أسطوري">🔥 Fresh • Fast • Legendary</div>
-      <h1 class="hero-title">
-        <span data-en="Taste the" data-ar="اكتشف طعم">Taste the</span>
-        <span class="hero-accent" data-en="Obsession." data-ar="الهوس.">Obsession.</span>
-      </h1>
-      <p class="hero-sub" data-en="Bold flavors. Crispy perfection. Delivered hot to your door — in 30 minutes or less." data-ar="نكهات جريئة. قرمشة مثالية. تُسلَّم ساخنة إلى بابك — في ٣٠ دقيقة أو أقل.">Bold flavors. Crispy perfection. Delivered hot to your door — in 30 minutes or less.</p>
-      <div class="hero-ctas">
-        <a href="#menu" class="btn btn-primary" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
-        <a href="#menu" class="btn btn-outline" data-en="View Menu" data-ar="تصفح القائمة">View Menu</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <strong>50K+</strong>
-          <span data-en="Orders Served" data-ar="طلب تم تسليمه">Orders Served</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>4.9★</strong>
-          <span data-en="Avg. Rating" data-ar="متوسط التقييم">Avg. Rating</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>≤30 min</strong>
-          <span data-en="Delivery Time" data-ar="وقت التسليم">Delivery Time</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span></span>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════ MENU ═══════════════════════════════ -->
-  <section class="section menu-section" id="menu">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en="Our Menu" data-ar="قائمتنا">Our Menu</span>
-        <h2 class="section-title" data-en="Built for Bold Cravings" data-ar="صُنع لإرواء شهيتك">Built for Bold Cravings</h2>
-        <p class="section-sub" data-en="Every item crafted with quality ingredients, cooked fresh, and served fast." data-ar="كل صنف يُعدّ بمكونات عالية الجودة، طازج ومقدّم بسرعة.">Every item crafted with quality ingredients, cooked fresh, and served fast.</p>
-      </div>
-
-      <div class="menu-filter" id="menuFilter">
-        <button class="filter-btn active" data-filter="all" data-en="All" data-ar="الكل">All</button>
-        <button class="filter-btn" data-filter="burgers" data-en="Burgers" data-ar="برغر">Burgers</button>
-        <button class="filter-btn" data-filter="sides" data-en="Sides" data-ar="مقبلات">Sides</button>
-        <button class="filter-btn" data-filter="combos" data-en="Combos" data-ar="وجبات">Combos</button>
-        <button class="filter-btn" data-filter="drinks" data-en="Drinks" data-ar="مشروبات">Drinks</button>
-      </div>
-
-      <div class="menu-grid" id="menuGrid">
-
-        <!-- Card 1: Smash Burger -->
-        <article class="menu-card" data-category="burgers">
-          <div class="menu-card-img-wrap">
-            <img src="menu_burger.png" alt="Double Smash Burger" loading="lazy" />
-            <span class="menu-badge" data-en="Best Seller" data-ar="الأكثر مبيعاً">Best Seller</span>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Double Smash Burger" data-ar="برغر سماش مزدوج">Double Smash Burger</h3>
-              <span class="menu-price">$8.99</span>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#menu" data-en="Menu" data-ar="القائمة">Menu</a></li>
+          <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
+          <li>
+            <a href="#why-us" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+          </li>
+          <li>
+            <a href="#reviews" data-en="Reviews" data-ar="التقييمات">Reviews</a>
+          </li>
+          <li>
+            <a href="#contact" data-en="Location" data-ar="الموقع">Location</a>
+          </li>
+          <li class="mobile-only">
+            <a
+              href="#menu"
+              class="nav-link-cta"
+              data-en="Order Now"
+              data-ar="اطلب الآن"
+              >Order Now</a
+            >
+          </li>
+          <li class="mobile-nav-actions">
+            <div class="mobile-toggles">
+              <!-- Language Toggle (Mirrored) -->
+              <button
+                class="lang-toggle sm"
+                onclick="document.getElementById('langToggle').click()"
+              >
+                <span class="lang-en lang-label-mirror">EN</span>
+                <span class="lang-divider">|</span>
+                <span class="lang-ar">AR</span>
+              </button>
+              <!-- Theme Toggle (Mirrored) -->
+              <button
+                class="theme-toggle sm"
+                onclick="document.getElementById('themeToggle').click()"
+              >
+                <span class="theme-mirror-icon theme-icon-mirror">☀️🌙</span>
+              </button>
             </div>
-            <p data-en="Two smashed beef patties, American cheese, pickles, caramelized onions & our secret sauce." data-ar="ضعف اللحم المفطوح، جبن أمريكي، مخلل، بصل كراميل، وصلصتنا السرية.">Two smashed beef patties, American cheese, pickles, caramelized onions & our secret sauce.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🔥 <span data-en="Spicy option" data-ar="خيار حار">Spicy option</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
+          </li>
+        </ul>
 
-        <!-- Card 2: Crispy Fries -->
-        <article class="menu-card" data-category="sides">
-          <div class="menu-card-img-wrap">
-            <img src="menu_fries.png" alt="Loaded Crispy Fries" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Loaded Crispy Fries" data-ar="فريز مقرمش محمّل">Loaded Crispy Fries</h3>
-              <span class="menu-price">$3.99</span>
-            </div>
-            <p data-en="Golden double-fried fries seasoned with our custom spice blend, served extra crispy." data-ar="بطاطس مقلية ذهبية بتوابلنا الخاصة، تُقدَّم قرمشة ممتازة.">Golden double-fried fries seasoned with our custom spice blend, served extra crispy.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🧂 <span data-en="Seasoned" data-ar="متبّلة">Seasoned</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
+        <div class="nav-actions">
+          <!-- Language Toggle -->
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            aria-label="Toggle Language"
+          >
+            <span class="lang-en" id="langLabel">EN</span>
+            <span class="lang-divider">|</span>
+            <span class="lang-ar">AR</span>
+          </button>
 
-        <!-- Card 3: Crispy Chicken Sandwich -->
-        <article class="menu-card" data-category="burgers">
-          <div class="menu-card-img-wrap">
-            <img src="menu_chicken.png" alt="Crispy Chicken Sandwich" loading="lazy" />
-            <span class="menu-badge new-badge" data-en="New" data-ar="جديد">New</span>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Crispy Chicken Sandwich" data-ar="ساندويش الدجاج المقرمش">Crispy Chicken Sandwich</h3>
-              <span class="menu-price">$7.49</span>
-            </div>
-            <p data-en="Buttermilk-brined crispy chicken fillet, coleslaw, pickles & honey-sriracha drizzle on a brioche bun." data-ar="دجاجة مقرمشة مع كول سلو، مخلل وصلصة عسل السريراتشا على خبز بريوش.">Buttermilk-brined crispy chicken fillet, coleslaw, pickles & honey-sriracha drizzle on a brioche bun.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🍗 <span data-en="Crispy" data-ar="مقرمش">Crispy</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
+          <!-- Dark/Light Mode Toggle -->
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle Theme"
+          >
+            <span class="theme-icon" id="themeIcon">☀️</span>
+          </button>
 
-        <!-- Card 4: Rush Combo -->
-        <article class="menu-card" data-category="combos">
-          <div class="menu-card-img-wrap">
-            <img src="menu_combo.png" alt="Rush Combo Meal" loading="lazy" />
-            <span class="menu-badge deal-badge" data-en="Best Value" data-ar="أفضل قيمة">Best Value</span>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Rush Combo Meal" data-ar="وجبة راش الكاملة">Rush Combo Meal</h3>
-              <span class="menu-price">$13.99</span>
-            </div>
-            <p data-en="Double Smash Burger + Large Crispy Fries + 16oz Fountain Drink. The full experience." data-ar="برغر سماش مزدوج + فريز كبير + مشروب ٤٧٠ مل. التجربة الكاملة.">Double Smash Burger + Large Crispy Fries + 16oz Fountain Drink. The full experience.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">💰 <span data-en="Save $2.50" data-ar="وفّر ٢.٥٠$">Save $2.50</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
+          <!-- Order Now CTA (nav) -->
+          <a
+            href="#menu"
+            class="nav-cta"
+            data-en="Order Now"
+            data-ar="اطلب الآن"
+            >Order Now</a
+          >
 
-        <!-- Card 5: Drinks -->
-        <article class="menu-card" data-category="drinks">
-          <div class="menu-card-img-wrap">
-            <img src="menu_drink.png" alt="Drinks Selection" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Drinks & Shakes" data-ar="مشروبات وميلك شيك">Drinks & Shakes</h3>
-              <span class="menu-price">$2.99+</span>
-            </div>
-            <p data-en="Cold sodas, creamy hand-crafted milkshakes (chocolate, vanilla, strawberry) & fresh OJ." data-ar="مشروبات غازية باردة، ميلك شيك كريمي (شوكولا، فانيليا، فراولة) وعصير برتقال طازج.">Cold sodas, creamy hand-crafted milkshakes (chocolate, vanilla, strawberry) & fresh OJ.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🥤 <span data-en="5 varieties" data-ar="٥ خيارات">5 varieties</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
+          <!-- Cart Button -->
+          <button
+            class="cart-btn"
+            id="cartBtn"
+            aria-label="Open cart"
+            aria-expanded="false"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              width="20"
+              height="20"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
 
-        <!-- Card 6: Family Feast -->
-        <article class="menu-card" data-category="combos">
-          <div class="menu-card-img-wrap">
-            <img src="menu_combo.png" alt="Family Feast" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Family Feast Box" data-ar="صندوق الوجبة العائلية">Family Feast Box</h3>
-              <span class="menu-price">$34.99</span>
-            </div>
-            <p data-en="4 Smash Burgers + 4 Fries + 4 Drinks + Dipping sauces. Feeds the whole squad." data-ar="٤ برغر + ٤ فريز + ٤ مشروبات + صلصات. يكفي الجميع.">4 Smash Burgers + 4 Fries + 4 Drinks + Dipping sauces. Feeds the whole squad.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">👨‍👩‍👧‍👦 <span data-en="Serves 4" data-ar="يكفي ٤ أشخاص">Serves 4</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
-
-
-        <!-- Card 7: Bacon BBQ Burger -->
-        <article class="menu-card" data-category="burgers" data-price="10.49">
-          <div class="menu-card-img-wrap">
-            <img src="menu_burger.png" alt="Bacon BBQ Burger" loading="lazy" />
-            <span class="menu-badge" data-en="🔥 Hot Pick" data-ar="🔥 الأكثر طلباً">🔥 Hot Pick</span>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Bacon BBQ Burger" data-ar="برغر بيكون بي بي كيو">Bacon BBQ Burger</h3>
-              <span class="menu-price">$10.49</span>
-            </div>
-            <p data-en="Juicy beef patty topped with smoky bacon, tangy BBQ sauce, cheddar cheese & crispy onion straws." data-ar="قرص لحم كثير العصير مع بيكون مدخّن، صلصة بي بي كيو، جبن شيدر وشرائط بصل مقرمشة.">Juicy beef patty topped with smoky bacon, tangy BBQ sauce, cheddar cheese &amp; crispy onion straws.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🥓 <span data-en="Smoky" data-ar="مدخّن">Smoky</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
-
-
-        <!-- Card 8: Crispy Chicken Strips -->
-        <article class="menu-card" data-category="sides" data-price="5.99">
-          <div class="menu-card-img-wrap">
-            <img src="menu_chicken.png" alt="Crispy Chicken Strips" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Crispy Chicken Strips" data-ar="شرائح الدجاج المقرمشة">Crispy Chicken Strips</h3>
-              <span class="menu-price">$5.99</span>
-            </div>
-            <p data-en="5 hand-breaded chicken tenders fried golden, served with your choice of dipping sauce." data-ar="٥ شرائح دجاج مخبوزة يدوياً ومقلية ذهبية، تُقدَّم مع صلصة غمس من اختيارك.">5 hand-breaded chicken tenders fried golden, served with your choice of dipping sauce.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🍗 <span data-en="5 pieces" data-ar="٥ قطع">5 pieces</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 9: Onion Rings -->
-        <article class="menu-card" data-category="sides" data-price="3.49">
-          <div class="menu-card-img-wrap">
-            <img src="menu_fries.png" alt="Onion Rings" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Crunchy Onion Rings" data-ar="حلقات البصل المقرمشة">Crunchy Onion Rings</h3>
-              <span class="menu-price">$3.49</span>
-            </div>
-            <p data-en="Thick-cut sweet onion rings in a light, golden beer batter — impossibly crunchy every time." data-ar="حلقات بصل حلو مقطّعة ثخينة في عجينة بيرة ذهبية خفيفة — قرمشة لا تُصدّق في كل مرة.">Thick-cut sweet onion rings in a light, golden beer batter — impossibly crunchy every time.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🧅 <span data-en="Fan Favorite" data-ar="المفضّل">Fan Favorite</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 10: Chocolate Milkshake -->
-        <article class="menu-card" data-category="drinks" data-price="4.49">
-          <div class="menu-card-img-wrap">
-            <img src="menu_drink.png" alt="Chocolate Milkshake" loading="lazy" />
-            <span class="menu-badge new-badge" data-en="New" data-ar="جديد">New</span>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Thick Chocolate Shake" data-ar="ميلك شيك شوكولا كثيف">Thick Chocolate Shake</h3>
-              <span class="menu-price">$4.49</span>
-            </div>
-            <p data-en="Hand-spun dark chocolate milkshake made with real cocoa and premium vanilla ice cream — extra thick." data-ar="ميلك شيك شوكولا داكنة مصنوع من الكاكاو الحقيقي وآيس كريم فانيليا فاخر — كثافة عالية.">Hand-spun dark chocolate milkshake made with real cocoa &amp; premium vanilla ice cream — extra thick.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🍫 <span data-en="Real cocoa" data-ar="كاكاو حقيقي">Real cocoa</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 11: Mega Combo XL -->
-        <article class="menu-card" data-category="combos" data-price="16.99">
-          <div class="menu-card-img-wrap">
-            <img src="menu_combo.png" alt="Mega Combo XL" loading="lazy" />
-            <span class="menu-badge deal-badge" data-en="XL Deal" data-ar="عرض XL">XL Deal</span>
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Mega Combo XL" data-ar="وجبة ميغا XL الكبيرة">Mega Combo XL</h3>
-              <span class="menu-price">$16.99</span>
-            </div>
-            <p data-en="Bacon BBQ Burger + XL Fries + Onion Rings + 32oz Drink. The biggest combo we offer." data-ar="برغر بيكون بي بي كيو + فريز XL + حلقات بصل + مشروب ٩٥٠ مل. أضخم وجبة لدينا.">Bacon BBQ Burger + XL Fries + Onion Rings + 32oz Drink. The biggest combo we offer.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">💥 <span data-en="Save $4.00" data-ar="وفّر ٤$">Save $4.00</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 12: Midnight Snack Box -->
-        <article class="menu-card" data-category="combos" data-price="22.99">
-          <div class="menu-card-img-wrap">
-            <img src="menu_combo.png" alt="Midnight Snack Box" loading="lazy" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-top">
-              <h3 data-en="Midnight Snack Box" data-ar="صندوق سناك منتصف الليل">Midnight Snack Box</h3>
-              <span class="menu-price">$22.99</span>
-            </div>
-            <p data-en="2 Burgers + Chicken Strips + Onion Rings + 2 Shakes. Designed for late-night cravings." data-ar="٢ برغر + شرائح دجاج + حلقات بصل + ٢ ميلك شيك. مصمّم لولائم منتصف الليل.">2 Burgers + Chicken Strips + Onion Rings + 2 Shakes. Designed for late-night cravings.</p>
-            <div class="menu-card-footer">
-              <span class="menu-meta">🌙 <span data-en="Late Night" data-ar="ليلي">Late Night</span></span>
-              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
-            </div>
-          </div>
-        </article>
-
-      </div><!-- /menu-grid -->
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img-col">
-          <div class="about-img-frame">
-            <img src="hero_burger.png" alt="BurgerRush kitchen craftsmanship" loading="lazy" />
-            <div class="about-img-caption">
-              <span data-en="Est. 2015" data-ar="تأسس عام ٢٠١٥">Est. 2015</span>
-            </div>
-          </div>
-          <div class="about-floating-stat">
-            <strong>9+</strong>
-            <span data-en="Years of Bold Flavor" data-ar="سنوات من النكهة الجريئة">Years of Bold Flavor</span>
-          </div>
-        </div>
-        <div class="about-text-col">
-          <span class="section-tag" data-en="Our Story" data-ar="قصتنا">Our Story</span>
-          <h2 class="section-title" data-en="We Didn't Open a Restaurant. We Started a Movement." data-ar="لم نفتح مطعماً. بدأنا حركةً.">We Didn't Open a Restaurant. We Started a Movement.</h2>
-          <p data-en="BurgerRush was born in 2015 from one rebellious idea: fast food doesn't have to be boring. We were sick of soggy buns, mystery meat, and unmemorable flavors. So we rebuilt the whole thing from scratch." data-ar="وُلد برغر راش عام ٢٠١٥ من فكرة جريئة: الوجبات السريعة لا يجب أن تكون مملة. مللنا من الخبز المبلل واللحم المجهول والنكهات التي لا تُذكر. فأعدنا بناء كل شيء من الصفر.">BurgerRush was born in 2015 from one rebellious idea: fast food doesn't have to be boring. We were sick of soggy buns, mystery meat, and unmemorable flavors. So we rebuilt the whole thing from scratch.</p>
-          <p data-en="Today, our team of passionate chefs smashes, seasons, and serves over 50,000 orders a month — all made fresh, always consistent, and with an obsessive focus on flavor." data-ar="اليوم، يعمل فريقنا من الطهاة المتحمسين على إعداد وتقديم أكثر من ٥٠,٠٠٠ طلب شهرياً — طازجة دائماً، متسقة، ومع اهتمام وسواسي بالنكهة.">Today, our team of passionate chefs smashes, seasons, and serves over 50,000 orders a month — all made fresh, always consistent, and with an obsessive focus on flavor.</p>
-          <ul class="about-highlights">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span data-en="Never frozen – always fresh-made patties" data-ar="أبداً مجمّد – لحم طازج دائماً">Never frozen – always fresh-made patties</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span data-en="Premium locally-sourced ingredients" data-ar="مكونات محلية مميزة المصدر">Premium locally-sourced ingredients</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span data-en="Award-winning recipes since 2017" data-ar="وصفات حائزة على جوائز منذ ٢٠١٧">Award-winning recipes since 2017</span>
-            </li>
-          </ul>
-          <a href="#menu" class="btn btn-primary" data-en="Explore the Menu" data-ar="استكشف القائمة">Explore the Menu</a>
+          <!-- Hamburger -->
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- ═══════════════════════════════ WHY CHOOSE US ═══════════════════════════════ -->
-  <section class="section why-section" id="why-us">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en="Why BurgerRush" data-ar="لماذا برغر راش">Why BurgerRush</span>
-        <h2 class="section-title" data-en="The Rush Difference" data-ar="فارق الراش">The Rush Difference</h2>
-        <p class="section-sub" data-en="We compete on flavor, speed, and experience — not just price." data-ar="نتنافس على النكهة والسرعة والتجربة — وليس السعر فقط.">We compete on flavor, speed, and experience — not just price.</p>
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img
+          src="hero_burger.png"
+          alt="BurgerRush signature burger"
+          class="hero-img"
+          loading="eager"
+        />
+        <div class="hero-overlay"></div>
       </div>
-
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">⚡</div>
-          <h3 data-en="Lightning Fast Delivery" data-ar="توصيل سريع كالبرق">Lightning Fast Delivery</h3>
-          <p data-en="30 minutes or it's on us. Our optimized kitchen and delivery network means your food arrives hot, every time." data-ar="٣٠ دقيقة أو الطلب علينا. مطبخنا المحسّن وشبكة التوصيل تضمن وصول طعامك ساخناً في كل مرة.">30 minutes or it's on us. Our optimized kitchen and delivery network means your food arrives hot, every time.</p>
+      <div class="hero-content">
+        <div
+          class="hero-badge"
+          data-en="🔥 Fresh • Fast • Legendary"
+          data-ar="🔥 طازج • سريع • أسطوري"
+        >
+          🔥 Fresh • Fast • Legendary
         </div>
-        <div class="why-card">
-          <div class="why-icon">🥩</div>
-          <h3 data-en="100% Fresh Ingredients" data-ar="مكونات طازجة ١٠٠٪">100% Fresh Ingredients</h3>
-          <p data-en="No freezers, no shortcuts. Our beef is ground daily, our buns are baked fresh, and our produce is delivered every morning." data-ar="لا ثلاجات، لا اختصارات. لحمنا يُطحن يومياً، خبزنا يُخبز طازجاً، وخضارنا تُسلَّم كل صباح.">No freezers, no shortcuts. Our beef is ground daily, our buns are baked fresh, and our produce is delivered every morning.</p>
+        <h1 class="hero-title">
+          <span data-en="Taste the" data-ar="اكتشف طعم">Taste the</span>
+          <span class="hero-accent" data-en="Obsession." data-ar="الهوس."
+            >Obsession.</span
+          >
+        </h1>
+        <p
+          class="hero-sub"
+          data-en="Bold flavors. Crispy perfection. Delivered hot to your door — in 30 minutes or less."
+          data-ar="نكهات جريئة. قرمشة مثالية. تُسلَّم ساخنة إلى بابك — في ٣٠ دقيقة أو أقل."
+        >
+          Bold flavors. Crispy perfection. Delivered hot to your door — in 30
+          minutes or less.
+        </p>
+        <div class="hero-ctas">
+          <a
+            href="#menu"
+            class="btn btn-primary"
+            data-en="Order Now"
+            data-ar="اطلب الآن"
+            >Order Now</a
+          >
+          <a
+            href="#menu"
+            class="btn btn-outline"
+            data-en="View Menu"
+            data-ar="تصفح القائمة"
+            >View Menu</a
+          >
         </div>
-        <div class="why-card">
-          <div class="why-icon">🔥</div>
-          <h3 data-en="Legendary Smash Technique" data-ar="تقنية السماش الأسطورية">Legendary Smash Technique</h3>
-          <p data-en="Our signature smash creates a caramelized crust that no regular burger can match. It's science and art in one bite." data-ar="تقنية السماش تخلق قشرة كراميلية لا يضاهيها أي برغر عادي. علم وفن في لقمة واحدة.">Our signature smash creates a caramelized crust that no regular burger can match. It's science and art in one bite.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">💳</div>
-          <h3 data-en="Easy & Secure Ordering" data-ar="طلب سهل وآمن">Easy & Secure Ordering</h3>
-          <p data-en="Order in 60 seconds via app or website. Multiple payment options. Real-time tracking from kitchen to door." data-ar="اطلب في ٦٠ ثانية عبر التطبيق أو الموقع. خيارات دفع متعددة. تتبع فوري من المطبخ حتى بابك.">Order in 60 seconds via app or website. Multiple payment options. Real-time tracking from kitchen to door.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">⭐</div>
-          <h3 data-en="4.9-Star Reputation" data-ar="سمعة ٤.٩ نجوم">4.9-Star Reputation</h3>
-          <p data-en="Over 12,000 five-star reviews across platforms. We don't chase ratings — we earn them, one burger at a time." data-ar="أكثر من ١٢,٠٠٠ تقييم بخمس نجوم عبر المنصات. لا نسعى للتقييمات — نكسبها، برغراً واحداً في كل مرة.">Over 12,000 five-star reviews across platforms. We don't chase ratings — we earn them, one burger at a time.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>50K+</strong>
+            <span data-en="Orders Served" data-ar="طلب تم تسليمه"
+              >Orders Served</span
+            >
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>4.9★</strong>
+            <span data-en="Avg. Rating" data-ar="متوسط التقييم"
+              >Avg. Rating</span
+            >
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>≤30 min</strong>
+            <span data-en="Delivery Time" data-ar="وقت التسليم"
+              >Delivery Time</span
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════ REVIEWS ═══════════════════════════════ -->
-  <section class="section reviews-section" id="reviews">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en="Customer Reviews" data-ar="تقييمات العملاء">Customer Reviews</span>
-        <h2 class="section-title" data-en="They Ordered. They Loved. They Came Back." data-ar="طلبوا. أحبوا. عادوا مجدداً.">They Ordered. They Loved. They Came Back.</h2>
+      <div class="hero-scroll-hint">
+        <span></span>
       </div>
+    </section>
 
-      <div class="reviews-grid">
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <blockquote data-en="Best burger I've ever had. The smash technique is insane — that crust, those flavors. I've tried every fast food place in the city. BurgerRush wins, no competition." data-ar="أفضل برغر أكلته في حياتي. تقنية السماش رهيبة — تلك القشرة، تلك النكهات. جربت كل مطعم وجبات سريعة في المدينة. برغر راش يفوز، بلا منافس.">Best burger I've ever had. The smash technique is insane — that crust, those flavors. I've tried every fast food place in the city. BurgerRush wins, no competition.</blockquote>
-          <div class="reviewer">
-            <div class="reviewer-avatar" aria-hidden="true">J</div>
-            <div class="reviewer-info">
-              <strong>James Carter</strong>
-              <span data-en="Food Blogger, NYC" data-ar="مدوّن طعام، نيويورك">Food Blogger, NYC</span>
-            </div>
-          </div>
+    <!-- ═══════════════════════════════ MENU ═══════════════════════════════ -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-en="Our Menu" data-ar="قائمتنا"
+            >Our Menu</span
+          >
+          <h2
+            class="section-title"
+            data-en="Built for Bold Cravings"
+            data-ar="صُنع لإرواء شهيتك"
+          >
+            Built for Bold Cravings
+          </h2>
+          <p
+            class="section-sub"
+            data-en="Every item crafted with quality ingredients, cooked fresh, and served fast."
+            data-ar="كل صنف يُعدّ بمكونات عالية الجودة، طازج ومقدّم بسرعة."
+          >
+            Every item crafted with quality ingredients, cooked fresh, and
+            served fast.
+          </p>
         </div>
 
-        <div class="review-card featured-review">
-          <div class="review-stars">★★★★★</div>
-          <blockquote data-en="Ordered the Rush Combo at 11pm. It arrived in 24 minutes. TWENTY FOUR MINUTES. And it was piping hot. The fries were crispy, the burger was perfect. This is what fast food should be." data-ar="طلبت وجبة الراش الكاملة الساعة ١١ مساءً. وصلت في ٢٤ دقيقة. أربع وعشرون دقيقة فقط. وكانت ساخنة جداً. الفريز كان قرمشاً والبرغر مثالياً. هكذا يجب أن تكون الوجبات السريعة.">Ordered the Rush Combo at 11pm. It arrived in 24 minutes. TWENTY FOUR MINUTES. And it was piping hot. The fries were crispy, the burger was perfect. This is what fast food should be.</blockquote>
-          <div class="reviewer">
-            <div class="reviewer-avatar" style="background: var(--accent);" aria-hidden="true">S</div>
-            <div class="reviewer-info">
-              <strong>Sarah Mitchell</strong>
-              <span data-en="Verified Customer" data-ar="عميلة موثّقة">Verified Customer</span>
-            </div>
-          </div>
+        <div class="menu-filter" id="menuFilter">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            data-en="All"
+            data-ar="الكل"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="burgers"
+            data-en="Burgers"
+            data-ar="برغر"
+          >
+            Burgers
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="sides"
+            data-en="Sides"
+            data-ar="مقبلات"
+          >
+            Sides
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="combos"
+            data-en="Combos"
+            data-ar="وجبات"
+          >
+            Combos
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="drinks"
+            data-en="Drinks"
+            data-ar="مشروبات"
+          >
+            Drinks
+          </button>
         </div>
 
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <blockquote data-en="My whole family tried the Family Feast Box for movie night. The kids demolished it in minutes. My wife who never eats burgers had seconds. That says everything." data-ar="تناولت عائلتي بأكملها صندوق الوجبة العائلية ليلة الأفلام. الأطفال التهموه في دقائق. زوجتي التي لا تأكل البرغر عادةً أخذت قطعة ثانية. هذا يقول كل شيء.">My whole family tried the Family Feast Box for movie night. The kids demolished it in minutes. My wife who never eats burgers had seconds. That says everything.</blockquote>
-          <div class="reviewer">
-            <div class="reviewer-avatar" aria-hidden="true">M</div>
-            <div class="reviewer-info">
-              <strong>Marcus Thompson</strong>
-              <span data-en="Loyal Customer since 2018" data-ar="عميل وفي منذ ٢٠١٨">Loyal Customer since 2018</span>
+        <div class="menu-grid" id="menuGrid">
+          <!-- Card 1: Smash Burger -->
+          <article class="menu-card" data-category="burgers">
+            <div class="menu-card-img-wrap">
+              <img
+                src="menu_burger.png"
+                alt="Double Smash Burger"
+                loading="lazy"
+              />
+              <span
+                class="menu-badge"
+                data-en="Best Seller"
+                data-ar="الأكثر مبيعاً"
+                >Best Seller</span
+              >
             </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <blockquote data-en="الدجاج المقرمش كان طازجاً جداً والصلصة كانت لذيذة بجنون. التوصيل سريع جداً والطعام وصل ساخناً. أفضل تجربة وجبات سريعة في المنطقة بكل صراحة." data-en-text="The crispy chicken was incredibly fresh, the sauce was insanely good. Super fast delivery, arrived hot. Honestly the best fast food experience in the area." data-ar="الدجاج المقرمش كان طازجاً جداً والصلصة كانت لذيذة بجنون. التوصيل سريع جداً والطعام وصل ساخناً. أفضل تجربة وجبات سريعة في المنطقة بكل صراحة.">The crispy chicken was incredibly fresh, the sauce was insanely good. Super fast delivery, arrived hot. Honestly the best fast food experience in the area.</blockquote>
-          <div class="reviewer">
-            <div class="reviewer-avatar" aria-hidden="true">A</div>
-            <div class="reviewer-info">
-              <strong>Ahmed Al-Rashid</strong>
-              <span data-en="Verified Customer" data-ar="عميل موثّق">Verified Customer</span>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3 data-en="Double Smash Burger" data-ar="برغر سماش مزدوج">
+                  Double Smash Burger
+                </h3>
+                <span class="menu-price">$8.99</span>
+              </div>
+              <p
+                data-en="Two smashed beef patties, American cheese, pickles, caramelized onions & our secret sauce."
+                data-ar="ضعف اللحم المفطوح، جبن أمريكي، مخلل، بصل كراميل، وصلصتنا السرية."
+              >
+                Two smashed beef patties, American cheese, pickles, caramelized
+                onions & our secret sauce.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🔥
+                  <span data-en="Spicy option" data-ar="خيار حار"
+                    >Spicy option</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <blockquote data-en="I work late shifts. Finding good food past midnight was a nightmare until BurgerRush. Now I order 3–4 times a week. The chicken sandwich and a shake is my after-work ritual." data-ar="أعمل في نوبات متأخرة. كان إيجاد طعام جيد بعد منتصف الليل كابوساً حتى اكتشفت برغر راش. الآن أطلب ٣–٤ مرات أسبوعياً. ساندوش الدجاج مع ميلك شيك هو طقوسي بعد العمل.">I work late shifts. Finding good food past midnight was a nightmare until BurgerRush. Now I order 3–4 times a week. The chicken sandwich and a shake is my after-work ritual.</blockquote>
-          <div class="reviewer">
-            <div class="reviewer-avatar" aria-hidden="true">L</div>
-            <div class="reviewer-info">
-              <strong>Layla Hernandez</strong>
-              <span data-en="Night-Shift Nurse" data-ar="ممرضة نوبة ليلية">Night-Shift Nurse</span>
+          <!-- Card 2: Crispy Fries -->
+          <article class="menu-card" data-category="sides">
+            <div class="menu-card-img-wrap">
+              <img
+                src="menu_fries.png"
+                alt="Loaded Crispy Fries"
+                loading="lazy"
+              />
             </div>
-          </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3 data-en="Loaded Crispy Fries" data-ar="فريز مقرمش محمّل">
+                  Loaded Crispy Fries
+                </h3>
+                <span class="menu-price">$3.99</span>
+              </div>
+              <p
+                data-en="Golden double-fried fries seasoned with our custom spice blend, served extra crispy."
+                data-ar="بطاطس مقلية ذهبية بتوابلنا الخاصة، تُقدَّم قرمشة ممتازة."
+              >
+                Golden double-fried fries seasoned with our custom spice blend,
+                served extra crispy.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🧂
+                  <span data-en="Seasoned" data-ar="متبّلة"
+                    >Seasoned</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Crispy Chicken Sandwich -->
+          <article class="menu-card" data-category="burgers">
+            <div class="menu-card-img-wrap">
+              <img
+                src="menu_chicken.png"
+                alt="Crispy Chicken Sandwich"
+                loading="lazy"
+              />
+              <span class="menu-badge new-badge" data-en="New" data-ar="جديد"
+                >New</span
+              >
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3
+                  data-en="Crispy Chicken Sandwich"
+                  data-ar="ساندويش الدجاج المقرمش"
+                >
+                  Crispy Chicken Sandwich
+                </h3>
+                <span class="menu-price">$7.49</span>
+              </div>
+              <p
+                data-en="Buttermilk-brined crispy chicken fillet, coleslaw, pickles & honey-sriracha drizzle on a brioche bun."
+                data-ar="دجاجة مقرمشة مع كول سلو، مخلل وصلصة عسل السريراتشا على خبز بريوش."
+              >
+                Buttermilk-brined crispy chicken fillet, coleslaw, pickles &
+                honey-sriracha drizzle on a brioche bun.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🍗 <span data-en="Crispy" data-ar="مقرمش">Crispy</span></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Rush Combo -->
+          <article class="menu-card" data-category="combos">
+            <div class="menu-card-img-wrap">
+              <img src="menu_combo.png" alt="Rush Combo Meal" loading="lazy" />
+              <span
+                class="menu-badge deal-badge"
+                data-en="Best Value"
+                data-ar="أفضل قيمة"
+                >Best Value</span
+              >
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3 data-en="Rush Combo Meal" data-ar="وجبة راش الكاملة">
+                  Rush Combo Meal
+                </h3>
+                <span class="menu-price">$13.99</span>
+              </div>
+              <p
+                data-en="Double Smash Burger + Large Crispy Fries + 16oz Fountain Drink. The full experience."
+                data-ar="برغر سماش مزدوج + فريز كبير + مشروب ٤٧٠ مل. التجربة الكاملة."
+              >
+                Double Smash Burger + Large Crispy Fries + 16oz Fountain Drink.
+                The full experience.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >💰
+                  <span data-en="Save $2.50" data-ar="وفّر ٢.٥٠$"
+                    >Save $2.50</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Drinks -->
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img src="menu_drink.png" alt="Drinks Selection" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3 data-en="Drinks & Shakes" data-ar="مشروبات وميلك شيك">
+                  Drinks & Shakes
+                </h3>
+                <span class="menu-price">$2.99+</span>
+              </div>
+              <p
+                data-en="Cold sodas, creamy hand-crafted milkshakes (chocolate, vanilla, strawberry) & fresh OJ."
+                data-ar="مشروبات غازية باردة، ميلك شيك كريمي (شوكولا، فانيليا، فراولة) وعصير برتقال طازج."
+              >
+                Cold sodas, creamy hand-crafted milkshakes (chocolate, vanilla,
+                strawberry) & fresh OJ.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🥤
+                  <span data-en="5 varieties" data-ar="٥ خيارات"
+                    >5 varieties</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Family Feast -->
+          <article class="menu-card" data-category="combos">
+            <div class="menu-card-img-wrap">
+              <img src="menu_combo.png" alt="Family Feast" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3 data-en="Family Feast Box" data-ar="صندوق الوجبة العائلية">
+                  Family Feast Box
+                </h3>
+                <span class="menu-price">$34.99</span>
+              </div>
+              <p
+                data-en="4 Smash Burgers + 4 Fries + 4 Drinks + Dipping sauces. Feeds the whole squad."
+                data-ar="٤ برغر + ٤ فريز + ٤ مشروبات + صلصات. يكفي الجميع."
+              >
+                4 Smash Burgers + 4 Fries + 4 Drinks + Dipping sauces. Feeds the
+                whole squad.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >👨‍👩‍👧‍👦
+                  <span data-en="Serves 4" data-ar="يكفي ٤ أشخاص"
+                    >Serves 4</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7: Bacon BBQ Burger -->
+          <article class="menu-card" data-category="burgers" data-price="10.49">
+            <div class="menu-card-img-wrap">
+              <img
+                src="menu_burger.png"
+                alt="Bacon BBQ Burger"
+                loading="lazy"
+              />
+              <span
+                class="menu-badge"
+                data-en="🔥 Hot Pick"
+                data-ar="🔥 الأكثر طلباً"
+                >🔥 Hot Pick</span
+              >
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3 data-en="Bacon BBQ Burger" data-ar="برغر بيكون بي بي كيو">
+                  Bacon BBQ Burger
+                </h3>
+                <span class="menu-price">$10.49</span>
+              </div>
+              <p
+                data-en="Juicy beef patty topped with smoky bacon, tangy BBQ sauce, cheddar cheese & crispy onion straws."
+                data-ar="قرص لحم كثير العصير مع بيكون مدخّن، صلصة بي بي كيو، جبن شيدر وشرائط بصل مقرمشة."
+              >
+                Juicy beef patty topped with smoky bacon, tangy BBQ sauce,
+                cheddar cheese &amp; crispy onion straws.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🥓 <span data-en="Smoky" data-ar="مدخّن">Smoky</span></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8: Crispy Chicken Strips -->
+          <article class="menu-card" data-category="sides" data-price="5.99">
+            <div class="menu-card-img-wrap">
+              <img
+                src="menu_chicken.png"
+                alt="Crispy Chicken Strips"
+                loading="lazy"
+              />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3
+                  data-en="Crispy Chicken Strips"
+                  data-ar="شرائح الدجاج المقرمشة"
+                >
+                  Crispy Chicken Strips
+                </h3>
+                <span class="menu-price">$5.99</span>
+              </div>
+              <p
+                data-en="5 hand-breaded chicken tenders fried golden, served with your choice of dipping sauce."
+                data-ar="٥ شرائح دجاج مخبوزة يدوياً ومقلية ذهبية، تُقدَّم مع صلصة غمس من اختيارك."
+              >
+                5 hand-breaded chicken tenders fried golden, served with your
+                choice of dipping sauce.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🍗
+                  <span data-en="5 pieces" data-ar="٥ قطع">5 pieces</span></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9: Onion Rings -->
+          <article class="menu-card" data-category="sides" data-price="3.49">
+            <div class="menu-card-img-wrap">
+              <img src="menu_fries.png" alt="Onion Rings" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3
+                  data-en="Crunchy Onion Rings"
+                  data-ar="حلقات البصل المقرمشة"
+                >
+                  Crunchy Onion Rings
+                </h3>
+                <span class="menu-price">$3.49</span>
+              </div>
+              <p
+                data-en="Thick-cut sweet onion rings in a light, golden beer batter — impossibly crunchy every time."
+                data-ar="حلقات بصل حلو مقطّعة ثخينة في عجينة بيرة ذهبية خفيفة — قرمشة لا تُصدّق في كل مرة."
+              >
+                Thick-cut sweet onion rings in a light, golden beer batter —
+                impossibly crunchy every time.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🧅
+                  <span data-en="Fan Favorite" data-ar="المفضّل"
+                    >Fan Favorite</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 10: Chocolate Milkshake -->
+          <article class="menu-card" data-category="drinks" data-price="4.49">
+            <div class="menu-card-img-wrap">
+              <img
+                src="menu_drink.png"
+                alt="Chocolate Milkshake"
+                loading="lazy"
+              />
+              <span class="menu-badge new-badge" data-en="New" data-ar="جديد"
+                >New</span
+              >
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3
+                  data-en="Thick Chocolate Shake"
+                  data-ar="ميلك شيك شوكولا كثيف"
+                >
+                  Thick Chocolate Shake
+                </h3>
+                <span class="menu-price">$4.49</span>
+              </div>
+              <p
+                data-en="Hand-spun dark chocolate milkshake made with real cocoa and premium vanilla ice cream — extra thick."
+                data-ar="ميلك شيك شوكولا داكنة مصنوع من الكاكاو الحقيقي وآيس كريم فانيليا فاخر — كثافة عالية."
+              >
+                Hand-spun dark chocolate milkshake made with real cocoa &amp;
+                premium vanilla ice cream — extra thick.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🍫
+                  <span data-en="Real cocoa" data-ar="كاكاو حقيقي"
+                    >Real cocoa</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 11: Mega Combo XL -->
+          <article class="menu-card" data-category="combos" data-price="16.99">
+            <div class="menu-card-img-wrap">
+              <img src="menu_combo.png" alt="Mega Combo XL" loading="lazy" />
+              <span
+                class="menu-badge deal-badge"
+                data-en="XL Deal"
+                data-ar="عرض XL"
+                >XL Deal</span
+              >
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3 data-en="Mega Combo XL" data-ar="وجبة ميغا XL الكبيرة">
+                  Mega Combo XL
+                </h3>
+                <span class="menu-price">$16.99</span>
+              </div>
+              <p
+                data-en="Bacon BBQ Burger + XL Fries + Onion Rings + 32oz Drink. The biggest combo we offer."
+                data-ar="برغر بيكون بي بي كيو + فريز XL + حلقات بصل + مشروب ٩٥٠ مل. أضخم وجبة لدينا."
+              >
+                Bacon BBQ Burger + XL Fries + Onion Rings + 32oz Drink. The
+                biggest combo we offer.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >💥
+                  <span data-en="Save $4.00" data-ar="وفّر ٤$"
+                    >Save $4.00</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 12: Midnight Snack Box -->
+          <article class="menu-card" data-category="combos" data-price="22.99">
+            <div class="menu-card-img-wrap">
+              <img
+                src="menu_combo.png"
+                alt="Midnight Snack Box"
+                loading="lazy"
+              />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3
+                  data-en="Midnight Snack Box"
+                  data-ar="صندوق سناك منتصف الليل"
+                >
+                  Midnight Snack Box
+                </h3>
+                <span class="menu-price">$22.99</span>
+              </div>
+              <p
+                data-en="2 Burgers + Chicken Strips + Onion Rings + 2 Shakes. Designed for late-night cravings."
+                data-ar="٢ برغر + شرائح دجاج + حلقات بصل + ٢ ميلك شيك. مصمّم لولائم منتصف الليل."
+              >
+                2 Burgers + Chicken Strips + Onion Rings + 2 Shakes. Designed
+                for late-night cravings.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-meta"
+                  >🌙
+                  <span data-en="Late Night" data-ar="ليلي"
+                    >Late Night</span
+                  ></span
+                >
+                <button
+                  class="add-btn"
+                  aria-label="Add to order"
+                  data-en="Add"
+                  data-ar="أضف"
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
-
-      </div><!-- /reviews-grid -->
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════ CONTACT / LOCATION ═══════════════════════════════ -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en="Find Us" data-ar="اعثر علينا">Find Us</span>
-        <h2 class="section-title" data-en="We're Closer Than You Think" data-ar="نحن أقرب مما تظن">We're Closer Than You Think</h2>
+        <!-- /menu-grid -->
       </div>
+    </section>
 
-      <div class="contact-grid">
-
-        <!-- Address Block -->
-        <div class="contact-card">
-          <div class="contact-icon">📍</div>
-          <h3 data-en="Our Locations" data-ar="مواقعنا">Our Locations</h3>
-          <ul class="contact-list">
-            <li>
-              <strong data-en="Downtown HQ:" data-ar="المقر الرئيسي:">Downtown HQ:</strong>
-              <span data-en="47 Rush Street, Downtown District, New York, NY 10001" data-ar="٤٧ شارع الراش، حي وسط المدينة، نيويورك، نيويورك ١٠٠٠١">47 Rush Street, Downtown District, New York, NY 10001</span>
-            </li>
-            <li>
-              <strong data-en="East Side Branch:" data-ar="فرع الجانب الشرقي:">East Side Branch:</strong>
-              <span data-en="112 Flavor Ave, East Village, New York, NY 10009" data-ar="١١٢ شارع الفلايفر، إيست فيلدج، نيويورك ١٠٠٠٩">112 Flavor Ave, East Village, New York, NY 10009</span>
-            </li>
-            <li>
-              <strong data-en="Midtown Express:" data-ar="فرع ميدتاون إكسبريس:">Midtown Express:</strong>
-              <span data-en="89 Grillhouse Blvd, Midtown, New York, NY 10036" data-ar="٨٩ شارع غريل هاوس، ميدتاون، نيويورك ١٠٠٣٦">89 Grillhouse Blvd, Midtown, New York, NY 10036</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Delivery Coverage -->
-        <div class="contact-card">
-          <div class="contact-icon">🚀</div>
-          <h3 data-en="Delivery Coverage" data-ar="نطاق التوصيل">Delivery Coverage</h3>
-          <p data-en="We deliver within a 15-mile radius of every branch — covering Manhattan, Brooklyn, Queens, and the Bronx. Use our app for real-time tracking. Live outside our zone? Check our pickup option!" data-ar="نوصّل في نطاق ٢٤ كيلومتر من كل فرع — يشمل مانهاتن، بروكلين، كوينز وذا برونكس. استخدم تطبيقنا للتتبع الفوري. تسكن خارج نطاقنا؟ تحقق من خيار الاستلام الذاتي!">We deliver within a 15-mile radius of every branch — covering Manhattan, Brooklyn, Queens, and the Bronx. Use our app for real-time tracking. Live outside our zone? Check our pickup option!</p>
-          <div class="delivery-zones">
-            <span class="zone-tag" data-en="Manhattan" data-ar="مانهاتن">Manhattan</span>
-            <span class="zone-tag" data-en="Brooklyn" data-ar="بروكلين">Brooklyn</span>
-            <span class="zone-tag" data-en="Queens" data-ar="كوينز">Queens</span>
-            <span class="zone-tag" data-en="The Bronx" data-ar="ذا برونكس">The Bronx</span>
-          </div>
-        </div>
-
-        <!-- Working Hours -->
-        <div class="contact-card">
-          <div class="contact-icon">🕐</div>
-          <h3 data-en="Working Hours" data-ar="أوقات العمل">Working Hours</h3>
-          <div class="hours-table">
-            <div class="hours-row">
-              <span data-en="Mon – Thu" data-ar="الإثنين – الخميس">Mon – Thu</span>
-              <span data-en="11:00 AM – 11:00 PM" data-ar="١١:٠٠ ص – ١١:٠٠ م">11:00 AM – 11:00 PM</span>
+    <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-col">
+            <div class="about-img-frame">
+              <img
+                src="hero_burger.png"
+                alt="BurgerRush kitchen craftsmanship"
+                loading="lazy"
+              />
+              <div class="about-img-caption">
+                <span data-en="Est. 2015" data-ar="تأسس عام ٢٠١٥"
+                  >Est. 2015</span
+                >
+              </div>
             </div>
-            <div class="hours-row">
-              <span data-en="Fri – Sat" data-ar="الجمعة – السبت">Fri – Sat</span>
-              <span class="hours-highlight" data-en="11:00 AM – 2:00 AM" data-ar="١١:٠٠ ص – ٢:٠٠ ص">11:00 AM – 2:00 AM</span>
-            </div>
-            <div class="hours-row">
-              <span data-en="Sunday" data-ar="الأحد">Sunday</span>
-              <span data-en="12:00 PM – 10:00 PM" data-ar="١٢:٠٠ م – ١٠:٠٠ م">12:00 PM – 10:00 PM</span>
-            </div>
-            <div class="hours-row delivery-note">
-              <span data-en="🛵 Delivery Hours" data-ar="🛵 ساعات التوصيل">🛵 Delivery Hours</span>
-              <span data-en="Same as above" data-ar="نفس أوقات العمل">Same as above</span>
+            <div class="about-floating-stat">
+              <strong>9+</strong>
+              <span
+                data-en="Years of Bold Flavor"
+                data-ar="سنوات من النكهة الجريئة"
+                >Years of Bold Flavor</span
+              >
             </div>
           </div>
+          <div class="about-text-col">
+            <span class="section-tag" data-en="Our Story" data-ar="قصتنا"
+              >Our Story</span
+            >
+            <h2
+              class="section-title"
+              data-en="We Didn't Open a Restaurant. We Started a Movement."
+              data-ar="لم نفتح مطعماً. بدأنا حركةً."
+            >
+              We Didn't Open a Restaurant. We Started a Movement.
+            </h2>
+            <p
+              data-en="BurgerRush was born in 2015 from one rebellious idea: fast food doesn't have to be boring. We were sick of soggy buns, mystery meat, and unmemorable flavors. So we rebuilt the whole thing from scratch."
+              data-ar="وُلد برغر راش عام ٢٠١٥ من فكرة جريئة: الوجبات السريعة لا يجب أن تكون مملة. مللنا من الخبز المبلل واللحم المجهول والنكهات التي لا تُذكر. فأعدنا بناء كل شيء من الصفر."
+            >
+              BurgerRush was born in 2015 from one rebellious idea: fast food
+              doesn't have to be boring. We were sick of soggy buns, mystery
+              meat, and unmemorable flavors. So we rebuilt the whole thing from
+              scratch.
+            </p>
+            <p
+              data-en="Today, our team of passionate chefs smashes, seasons, and serves over 50,000 orders a month — all made fresh, always consistent, and with an obsessive focus on flavor."
+              data-ar="اليوم، يعمل فريقنا من الطهاة المتحمسين على إعداد وتقديم أكثر من ٥٠,٠٠٠ طلب شهرياً — طازجة دائماً، متسقة، ومع اهتمام وسواسي بالنكهة."
+            >
+              Today, our team of passionate chefs smashes, seasons, and serves
+              over 50,000 orders a month — all made fresh, always consistent,
+              and with an obsessive focus on flavor.
+            </p>
+            <ul class="about-highlights">
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span
+                  data-en="Never frozen – always fresh-made patties"
+                  data-ar="أبداً مجمّد – لحم طازج دائماً"
+                  >Never frozen – always fresh-made patties</span
+                >
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span
+                  data-en="Premium locally-sourced ingredients"
+                  data-ar="مكونات محلية مميزة المصدر"
+                  >Premium locally-sourced ingredients</span
+                >
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span
+                  data-en="Award-winning recipes since 2017"
+                  data-ar="وصفات حائزة على جوائز منذ ٢٠١٧"
+                  >Award-winning recipes since 2017</span
+                >
+              </li>
+            </ul>
+            <a
+              href="#menu"
+              class="btn btn-primary"
+              data-en="Explore the Menu"
+              data-ar="استكشف القائمة"
+              >Explore the Menu</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ WHY CHOOSE US ═══════════════════════════════ -->
+    <section class="section why-section" id="why-us">
+      <div class="container">
+        <div class="section-header">
+          <span
+            class="section-tag"
+            data-en="Why BurgerRush"
+            data-ar="لماذا برغر راش"
+            >Why BurgerRush</span
+          >
+          <h2
+            class="section-title"
+            data-en="The Rush Difference"
+            data-ar="فارق الراش"
+          >
+            The Rush Difference
+          </h2>
+          <p
+            class="section-sub"
+            data-en="We compete on flavor, speed, and experience — not just price."
+            data-ar="نتنافس على النكهة والسرعة والتجربة — وليس السعر فقط."
+          >
+            We compete on flavor, speed, and experience — not just price.
+          </p>
         </div>
 
-        <!-- Contact Info -->
-        <div class="contact-card">
-          <div class="contact-icon">📞</div>
-          <h3 data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h3>
-          <ul class="contact-list">
-            <li>
-              <strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong>
-              <a href="tel:+12125550199">+1 (212) 555-0199</a>
-            </li>
-            <li>
-              <strong data-en="Email:" data-ar="البريد الإلكتروني:">Email:</strong>
-              <a href="mailto:hello@burgerrush.com">hello@burgerrush.com</a>
-            </li>
-            <li>
-              <strong data-en="Order App:" data-ar="تطبيق الطلب:">Order App:</strong>
-              <a href="#" data-en="Download on iOS & Android" data-ar="حمّله على iOS وAndroid">Download on iOS & Android</a>
-            </li>
-          </ul>
-          <a href="tel:+12125550199" class="btn btn-primary" style="margin-top:1.5rem;" data-en="Call to Order" data-ar="اتصل للطلب">Call to Order</a>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <h3 data-en="Lightning Fast Delivery" data-ar="توصيل سريع كالبرق">
+              Lightning Fast Delivery
+            </h3>
+            <p
+              data-en="30 minutes or it's on us. Our optimized kitchen and delivery network means your food arrives hot, every time."
+              data-ar="٣٠ دقيقة أو الطلب علينا. مطبخنا المحسّن وشبكة التوصيل تضمن وصول طعامك ساخناً في كل مرة."
+            >
+              30 minutes or it's on us. Our optimized kitchen and delivery
+              network means your food arrives hot, every time.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🥩</div>
+            <h3 data-en="100% Fresh Ingredients" data-ar="مكونات طازجة ١٠٠٪">
+              100% Fresh Ingredients
+            </h3>
+            <p
+              data-en="No freezers, no shortcuts. Our beef is ground daily, our buns are baked fresh, and our produce is delivered every morning."
+              data-ar="لا ثلاجات، لا اختصارات. لحمنا يُطحن يومياً، خبزنا يُخبز طازجاً، وخضارنا تُسلَّم كل صباح."
+            >
+              No freezers, no shortcuts. Our beef is ground daily, our buns are
+              baked fresh, and our produce is delivered every morning.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">💳</div>
+            <h3 data-en="Easy & Secure Ordering" data-ar="طلب سهل وآمن">
+              Easy & Secure Ordering
+            </h3>
+            <p
+              data-en="Order in 60 seconds via app or website. Multiple payment options. Real-time tracking from kitchen to door."
+              data-ar="اطلب في ٦٠ ثانية عبر التطبيق أو الموقع. خيارات دفع متعددة. تتبع فوري من المطبخ حتى بابك."
+            >
+              Order in 60 seconds via app or website. Multiple payment options.
+              Real-time tracking from kitchen to door.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">⭐</div>
+            <h3 data-en="4.9-Star Reputation" data-ar="سمعة ٤.٩ نجوم">
+              4.9-Star Reputation
+            </h3>
+            <p
+              data-en="Over 12,000 five-star reviews across platforms. We don't chase ratings — we earn them, one burger at a time."
+              data-ar="أكثر من ١٢,٠٠٠ تقييم بخمس نجوم عبر المنصات. لا نسعى للتقييمات — نكسبها، برغراً واحداً في كل مرة."
+            >
+              Over 12,000 five-star reviews across platforms. We don't chase
+              ratings — we earn them, one burger at a time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ REVIEWS ═══════════════════════════════ -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span
+            class="section-tag"
+            data-en="Customer Reviews"
+            data-ar="تقييمات العملاء"
+            >Customer Reviews</span
+          >
+          <h2
+            class="section-title"
+            data-en="They Ordered. They Loved. They Came Back."
+            data-ar="طلبوا. أحبوا. عادوا مجدداً."
+          >
+            They Ordered. They Loved. They Came Back.
+          </h2>
         </div>
 
-      </div><!-- /contact-grid -->
-    </div>
-  </section>
+        <div class="reviews-grid">
+          <div class="review-card featured-review">
+            <div class="review-stars">★★★★★</div>
+            <blockquote
+              data-en="Ordered the Rush Combo at 11pm. It arrived in 24 minutes. TWENTY FOUR MINUTES. And it was piping hot. The fries were crispy, the burger was perfect. This is what fast food should be."
+              data-ar="طلبت وجبة الراش الكاملة الساعة ١١ مساءً. وصلت في ٢٤ دقيقة. أربع وعشرون دقيقة فقط. وكانت ساخنة جداً. الفريز كان قرمشاً والبرغر مثالياً. هكذا يجب أن تكون الوجبات السريعة."
+            >
+              Ordered the Rush Combo at 11pm. It arrived in 24 minutes. TWENTY
+              FOUR MINUTES. And it was piping hot. The fries were crispy, the
+              burger was perfect. This is what fast food should be.
+            </blockquote>
+            <div class="reviewer">
+              <div
+                class="reviewer-avatar"
+                style="background: var(--accent)"
+                aria-hidden="true"
+              >
+                S
+              </div>
+              <div class="reviewer-info">
+                <strong>Sarah Mitchell</strong>
+                <span data-en="Verified Customer" data-ar="عميلة موثّقة"
+                  >Verified Customer</span
+                >
+              </div>
+            </div>
+          </div>
 
-  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="nav-logo footer-logo">
-            <span class="logo-icon">🔥</span>
-            <span class="logo-text" data-en="BurgerRush" data-ar="برغر راش">BurgerRush</span>
-          </a>
-          <p data-en="Fast food that refuses to compromise. Bold flavors, fresh ingredients, lightning speed — every single time." data-ar="وجبات سريعة ترفض التسويات. نكهات جريئة، مكونات طازجة، سرعة فائقة — في كل مرة.">Fast food that refuses to compromise. Bold flavors, fresh ingredients, lightning speed — every single time.</p>
-          <div class="footer-social">
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote
+              data-en="My whole family tried the Family Feast Box for movie night. The kids demolished it in minutes. My wife who never eats burgers had seconds. That says everything."
+              data-ar="تناولت عائلتي بأكملها صندوق الوجبة العائلية ليلة الأفلام. الأطفال التهموه في دقائق. زوجتي التي لا تأكل البرغر عادةً أخذت قطعة ثانية. هذا يقول كل شيء."
+            >
+              My whole family tried the Family Feast Box for movie night. The
+              kids demolished it in minutes. My wife who never eats burgers had
+              seconds. That says everything.
+            </blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">M</div>
+              <div class="reviewer-info">
+                <strong>Marcus Thompson</strong>
+                <span
+                  data-en="Loyal Customer since 2018"
+                  data-ar="عميل وفي منذ ٢٠١٨"
+                  >Loyal Customer since 2018</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote
+              data-en="الدجاج المقرمش كان طازجاً جداً والصلصة كانت لذيذة بجنون. التوصيل سريع جداً والطعام وصل ساخناً. أفضل تجربة وجبات سريعة في المنطقة بكل صراحة."
+              data-en-text="The crispy chicken was incredibly fresh, the sauce was insanely good. Super fast delivery, arrived hot. Honestly the best fast food experience in the area."
+              data-ar="الدجاج المقرمش كان طازجاً جداً والصلصة كانت لذيذة بجنون. التوصيل سريع جداً والطعام وصل ساخناً. أفضل تجربة وجبات سريعة في المنطقة بكل صراحة."
+            >
+              The crispy chicken was incredibly fresh, the sauce was insanely
+              good. Super fast delivery, arrived hot. Honestly the best fast
+              food experience in the area.
+            </blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">A</div>
+              <div class="reviewer-info">
+                <strong>Ahmed Al-Rashid</strong>
+                <span data-en="Verified Customer" data-ar="عميل موثّق"
+                  >Verified Customer</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote
+              data-en="I work late shifts. Finding good food past midnight was a nightmare until BurgerRush. Now I order 3–4 times a week. The chicken sandwich and a shake is my after-work ritual."
+              data-ar="أعمل في نوبات متأخرة. كان إيجاد طعام جيد بعد منتصف الليل كابوساً حتى اكتشفت برغر راش. الآن أطلب ٣–٤ مرات أسبوعياً. ساندوش الدجاج مع ميلك شيك هو طقوسي بعد العمل."
+            >
+              I work late shifts. Finding good food past midnight was a
+              nightmare until BurgerRush. Now I order 3–4 times a week. The
+              chicken sandwich and a shake is my after-work ritual.
+            </blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">L</div>
+              <div class="reviewer-info">
+                <strong>Layla Hernandez</strong>
+                <span data-en="Night-Shift Nurse" data-ar="ممرضة نوبة ليلية"
+                  >Night-Shift Nurse</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /reviews-grid -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CONTACT / LOCATION ═══════════════════════════════ -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-en="Find Us" data-ar="اعثر علينا"
+            >Find Us</span
+          >
+          <h2
+            class="section-title"
+            data-en="We're Closer Than You Think"
+            data-ar="نحن أقرب مما تظن"
+          >
+            We're Closer Than You Think
+          </h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Working Hours -->
+          <div class="contact-card">
+            <div class="contact-icon">🕐</div>
+            <h3 data-en="Working Hours" data-ar="أوقات العمل">Working Hours</h3>
+            <div class="hours-table">
+              <div class="hours-row">
+                <span data-en="Mon – Thu" data-ar="الإثنين – الخميس"
+                  >Mon – Thu</span
+                >
+                <span data-en="11:00 AM – 11:00 PM" data-ar="١١:٠٠ ص – ١١:٠٠ م"
+                  >11:00 AM – 11:00 PM</span
+                >
+              </div>
+              <div class="hours-row">
+                <span data-en="Fri – Sat" data-ar="الجمعة – السبت"
+                  >Fri – Sat</span
+                >
+                <span
+                  class="hours-highlight"
+                  data-en="11:00 AM – 2:00 AM"
+                  data-ar="١١:٠٠ ص – ٢:٠٠ ص"
+                  >11:00 AM – 2:00 AM</span
+                >
+              </div>
+              <div class="hours-row">
+                <span data-en="Sunday" data-ar="الأحد">Sunday</span>
+                <span data-en="12:00 PM – 10:00 PM" data-ar="١٢:٠٠ م – ١٠:٠٠ م"
+                  >12:00 PM – 10:00 PM</span
+                >
+              </div>
+              <div class="hours-row delivery-note">
+                <span data-en="🛵 Delivery Hours" data-ar="🛵 ساعات التوصيل"
+                  >🛵 Delivery Hours</span
+                >
+                <span data-en="Same as above" data-ar="نفس أوقات العمل"
+                  >Same as above</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3 data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h3>
+            <ul class="contact-list">
+              <li>
+                <strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong>
+                <a href="#">01063841779</a>
+              </li>
+              <li>
+                <strong data-en="Email:" data-ar="البريد الإلكتروني:"
+                  >Email:</strong
+                >
+                <a href="mailto:hello@burgerrush.com">wahadmomo@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /contact-grid -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="nav-logo footer-logo">
+              <span class="logo-icon">🔥</span>
+              <span class="logo-text" data-en="BurgerRush" data-ar="برغر راش"
+                >BurgerRush</span
+              >
             </a>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="TikTok">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.08a8.27 8.27 0 004.84 1.55V7.18a4.85 4.85 0 01-1.07-.49z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Twitter/X">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
+            <p
+              data-en="Fast food that refuses to compromise. Bold flavors, fresh ingredients, lightning speed — every single time."
+              data-ar="وجبات سريعة ترفض التسويات. نكهات جريئة، مكونات طازجة، سرعة فائقة — في كل مرة."
+            >
+              Fast food that refuses to compromise. Bold flavors, fresh
+              ingredients, lightning speed — every single time.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1.5"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.08a8.27 8.27 0 004.84 1.55V7.18a4.85 4.85 0 01-1.07-.49z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter/X">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+            <ul>
+              <li><a href="#menu" data-en="Menu" data-ar="القائمة">Menu</a></li>
+              <li>
+                <a href="#about" data-en="About Us" data-ar="من نحن"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#why-us" data-en="Why Us" data-ar="لماذا نحن"
+                  >Why Us</a
+                >
+              </li>
+              <li>
+                <a href="#reviews" data-en="Reviews" data-ar="التقييمات"
+                  >Reviews</a
+                >
+              </li>
+              <li>
+                <a href="#contact" data-en="Location" data-ar="الموقع"
+                  >Location</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-en="Menu Highlights" data-ar="أبرز الأصناف">
+              Menu Highlights
+            </h4>
+            <ul>
+              <li>
+                <a
+                  href="#menu"
+                  data-en="Double Smash Burger"
+                  data-ar="برغر سماش مزدوج"
+                  >Double Smash Burger</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#menu"
+                  data-en="Crispy Chicken Sandwich"
+                  data-ar="ساندوش الدجاج المقرمش"
+                  >Crispy Chicken Sandwich</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#menu"
+                  data-en="Loaded Crispy Fries"
+                  data-ar="فريز مقرمش محمّل"
+                  >Loaded Crispy Fries</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#menu"
+                  data-en="Rush Combo Meal"
+                  data-ar="وجبة الراش الكاملة"
+                  >Rush Combo Meal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#menu"
+                  data-en="Family Feast Box"
+                  data-ar="صندوق الوجبة العائلية"
+                  >Family Feast Box</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="footer-col">
-          <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
-          <ul>
-            <li><a href="#menu" data-en="Menu" data-ar="القائمة">Menu</a></li>
-            <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
-            <li><a href="#why-us" data-en="Why Us" data-ar="لماذا نحن">Why Us</a></li>
-            <li><a href="#reviews" data-en="Reviews" data-ar="التقييمات">Reviews</a></li>
-            <li><a href="#contact" data-en="Location" data-ar="الموقع">Location</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 data-en="Menu Highlights" data-ar="أبرز الأصناف">Menu Highlights</h4>
-          <ul>
-            <li><a href="#menu" data-en="Double Smash Burger" data-ar="برغر سماش مزدوج">Double Smash Burger</a></li>
-            <li><a href="#menu" data-en="Crispy Chicken Sandwich" data-ar="ساندوش الدجاج المقرمش">Crispy Chicken Sandwich</a></li>
-            <li><a href="#menu" data-en="Loaded Crispy Fries" data-ar="فريز مقرمش محمّل">Loaded Crispy Fries</a></li>
-            <li><a href="#menu" data-en="Rush Combo Meal" data-ar="وجبة الراش الكاملة">Rush Combo Meal</a></li>
-            <li><a href="#menu" data-en="Family Feast Box" data-ar="صندوق الوجبة العائلية">Family Feast Box</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 data-en="Contact" data-ar="التواصل">Contact</h4>
-          <ul>
-            <li><a href="tel:+12125550199">+1 (212) 555-0199</a></li>
-            <li><a href="mailto:hello@burgerrush.com">hello@burgerrush.com</a></li>
-            <li><span data-en="47 Rush St, Downtown NYC" data-ar="٤٧ شارع الراش، وسط نيويورك">47 Rush St, Downtown NYC</span></li>
-          </ul>
+        <div class="footer-bottom">
+          <p
+            data-en="© 2026 BurgerRush. All rights reserved."
+            data-ar="©  2026 برغر راش. جميع الحقوق محفوظة "
+          >
+            © 2026 BurgerRush. All rights reserved.
+          </p>
         </div>
       </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <p data-en="© 2025 BurgerRush. All rights reserved." data-ar="© ٢٠٢٥ برغر راش. جميع الحقوق محفوظة.">© 2025 BurgerRush. All rights reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="#" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
-          <a href="#" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
-        </div>
+    <!-- Toast notification -->
+    <div class="toast" id="toast" aria-live="polite"></div>
+
+    <!-- ═══════════════════════════════ CART PANEL ═══════════════════════════════ -->
+    <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+
+    <aside
+      class="cart-panel"
+      id="cartPanel"
+      aria-label="Order Cart"
+      aria-hidden="true"
+    >
+      <div class="cart-panel-header">
+        <h2 class="cart-title">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            width="20"
+            height="20"
+          >
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path
+              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+            />
+          </svg>
+          <span data-en="Your Order" data-ar="طلبك">Your Order</span>
+        </h2>
+        <button class="cart-close" id="cartClose" aria-label="Close cart">
+          &times;
+        </button>
       </div>
-    </div>
-  </footer>
 
-  <!-- Toast notification -->
-  <div class="toast" id="toast" aria-live="polite"></div>
-
-  <!-- ═══════════════════════════════ CART PANEL ═══════════════════════════════ -->
-  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
-
-  <aside class="cart-panel" id="cartPanel" aria-label="Order Cart" aria-hidden="true">
-    <div class="cart-panel-header">
-      <h2 class="cart-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="20" height="20"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        <span data-en="Your Order" data-ar="طلبك">Your Order</span>
-      </h2>
-      <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
-    </div>
-
-    <!-- Cart Items -->
-    <div class="cart-items-wrap" id="cartItemsWrap">
-      <div class="cart-empty" id="cartEmpty">
-        <span class="cart-empty-icon">🛒</span>
-        <p data-en="Your cart is empty. Add items from the menu!" data-ar="سلتك فارغة. أضف أصنافاً من القائمة!">Your cart is empty. Add items from the menu!</p>
+      <!-- Cart Items -->
+      <div class="cart-items-wrap" id="cartItemsWrap">
+        <div class="cart-empty" id="cartEmpty">
+          <span class="cart-empty-icon">🛒</span>
+          <p
+            data-en="Your cart is empty. Add items from the menu!"
+            data-ar="سلتك فارغة. أضف أصنافاً من القائمة!"
+          >
+            Your cart is empty. Add items from the menu!
+          </p>
+        </div>
+        <ul class="cart-items-list" id="cartItemsList"></ul>
       </div>
-      <ul class="cart-items-list" id="cartItemsList"></ul>
-    </div>
 
-    <!-- Cart Total -->
-    <div class="cart-total-row" id="cartTotalRow">
-      <span data-en="Total" data-ar="الإجمالي">Total</span>
-      <span class="cart-total-amount" id="cartTotalAmount">$0.00</span>
-    </div>
+      <!-- Cart Total -->
+      <div class="cart-total-row" id="cartTotalRow">
+        <span data-en="Total" data-ar="الإجمالي">Total</span>
+        <span class="cart-total-amount" id="cartTotalAmount">$0.00</span>
+      </div>
 
-    <!-- Order Form -->
-    <div class="cart-form-wrap" id="cartFormWrap">
-      <h3 class="cart-form-title" data-en="Delivery Details" data-ar="تفاصيل التوصيل">Delivery Details</h3>
+      <!-- Order Form -->
+      <div class="cart-form-wrap" id="cartFormWrap">
+        <h3
+          class="cart-form-title"
+          data-en="Delivery Details"
+          data-ar="تفاصيل التوصيل"
+        >
+          Delivery Details
+        </h3>
 
-      <form class="cart-form" id="orderForm" novalidate>
-        <!-- FormSubmit hidden config -->
-        <input type="hidden" name="_subject" value="New BurgerRush Order!" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="order_details" id="orderDetailsField" value="" />
+        <form class="cart-form" id="orderForm" novalidate>
+          <!-- FormSubmit hidden config -->
+          <input type="hidden" name="_subject" value="New BurgerRush Order!" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="order_details"
+            id="orderDetailsField"
+            value=""
+          />
 
-        <div class="cart-field">
-          <label for="customerName" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
-          <input type="text" id="customerName" name="Full Name" placeholder="John Smith" autocomplete="name" />
-          <span class="field-err" id="nameErr" data-en="Name is required" data-ar="الاسم مطلوب">Name is required</span>
-        </div>
+          <div class="cart-field">
+            <label for="customerName" data-en="Full Name" data-ar="الاسم الكامل"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="customerName"
+              name="Full Name"
+              placeholder="John Smith"
+              autocomplete="name"
+            />
+            <span
+              class="field-err"
+              id="nameErr"
+              data-en="Name is required"
+              data-ar="الاسم مطلوب"
+              >Name is required</span
+            >
+          </div>
 
-        <div class="cart-field">
-          <label for="customerPhone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
-          <input type="tel" id="customerPhone" name="Phone Number" placeholder="+1 (555) 000-0000" autocomplete="tel" />
-          <span class="field-err" id="phoneErr" data-en="Phone is required" data-ar="رقم الهاتف مطلوب">Phone is required</span>
-        </div>
+          <div class="cart-field">
+            <label
+              for="customerPhone"
+              data-en="Phone Number"
+              data-ar="رقم الهاتف"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              id="customerPhone"
+              name="Phone Number"
+              placeholder="+20 112345678"
+              autocomplete="tel"
+            />
+            <span
+              class="field-err"
+              id="phoneErr"
+              data-en="Phone is required"
+              data-ar="رقم الهاتف مطلوب"
+              >Phone is required</span
+            >
+          </div>
 
-        <div class="cart-field">
-          <label for="customerAddress" data-en="Delivery Address" data-ar="عنوان التوصيل">Delivery Address</label>
-          <textarea id="customerAddress" name="Delivery Address" rows="2" placeholder="123 Main St, New York, NY 10001" autocomplete="street-address"></textarea>
-          <span class="field-err" id="addressErr" data-en="Address is required" data-ar="العنوان مطلوب">Address is required</span>
-        </div>
+          <div class="cart-field">
+            <label
+              for="customerAddress"
+              data-en="Delivery Address"
+              data-ar="عنوان التوصيل"
+              >Delivery Address</label
+            >
+            <textarea
+              id="customerAddress"
+              name="Delivery Address"
+              rows="2"
+              placeholder="123 Main St, New York, NY 10001"
+              autocomplete="street-address"
+            ></textarea>
+            <span
+              class="field-err"
+              id="addressErr"
+              data-en="Address is required"
+              data-ar="العنوان مطلوب"
+              >Address is required</span
+            >
+          </div>
 
-        <!-- Success / Error messages -->
-        <div class="cart-msg cart-msg-success" id="cartSuccess" aria-live="polite">
-          <span>✅</span>
-          <span data-en="Order submitted successfully! We'll contact you shortly." data-ar="تم إرسال طلبك بنجاح! سنتواصل معك قريباً.">Order submitted successfully! We'll contact you shortly.</span>
-        </div>
-        <div class="cart-msg cart-msg-error" id="cartError" aria-live="polite">
-          <span>❌</span>
-          <span data-en="Something went wrong. Please call us directly." data-ar="حدث خطأ ما. يرجى الاتصال بنا مباشرة.">Something went wrong. Please call us directly.</span>
-        </div>
+          <!-- Success / Error messages -->
+          <div
+            class="cart-msg cart-msg-success"
+            id="cartSuccess"
+            aria-live="polite"
+          >
+            <span>✅</span>
+            <span
+              data-en="Order submitted successfully! We'll contact you shortly."
+              data-ar="تم إرسال طلبك بنجاح! سنتواصل معك قريباً."
+              >Order submitted successfully! We'll contact you shortly.</span
+            >
+          </div>
+          <div
+            class="cart-msg cart-msg-error"
+            id="cartError"
+            aria-live="polite"
+          >
+            <span>❌</span>
+            <span
+              data-en="Something went wrong. Please call us directly."
+              data-ar="حدث خطأ ما. يرجى الاتصال بنا مباشرة."
+              >Something went wrong. Please call us directly.</span
+            >
+          </div>
 
-        <button type="submit" class="btn btn-primary cart-submit" id="cartSubmit" data-en="Confirm Order" data-ar="تأكيد الطلب">Confirm Order</button>
-      </form>
-    </div>
-  </aside>
+          <button
+            type="submit"
+            class="btn btn-primary cart-submit"
+            id="cartSubmit"
+            data-en="Confirm Order"
+            data-ar="تأكيد الطلب"
+          >
+            Confirm Order
+          </button>
+        </form>
+      </div>
+    </aside>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
