@@ -45,6 +45,12 @@
         <!-- Order Now CTA (nav) -->
         <a href="#menu" class="nav-cta" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
 
+        <!-- Cart Button -->
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="20" height="20"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
         <!-- Hamburger -->
         <button class="hamburger" id="hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -217,6 +223,137 @@
             <p data-en="4 Smash Burgers + 4 Fries + 4 Drinks + Dipping sauces. Feeds the whole squad." data-ar="٤ برغر + ٤ فريز + ٤ مشروبات + صلصات. يكفي الجميع.">4 Smash Burgers + 4 Fries + 4 Drinks + Dipping sauces. Feeds the whole squad.</p>
             <div class="menu-card-footer">
               <span class="menu-meta">👨‍👩‍👧‍👦 <span data-en="Serves 4" data-ar="يكفي ٤ أشخاص">Serves 4</span></span>
+              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- Card 7: Bacon BBQ Burger -->
+        <article class="menu-card" data-category="burgers" data-price="10.49">
+          <div class="menu-card-img-wrap">
+            <img src="menu_burger.png" alt="Bacon BBQ Burger" loading="lazy" />
+            <span class="menu-badge" data-en="🔥 Hot Pick" data-ar="🔥 الأكثر طلباً">🔥 Hot Pick</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3 data-en="Bacon BBQ Burger" data-ar="برغر بيكون بي بي كيو">Bacon BBQ Burger</h3>
+              <span class="menu-price">$10.49</span>
+            </div>
+            <p data-en="Juicy beef patty topped with smoky bacon, tangy BBQ sauce, cheddar cheese & crispy onion straws." data-ar="قرص لحم كثير العصير مع بيكون مدخّن، صلصة بي بي كيو، جبن شيدر وشرائط بصل مقرمشة.">Juicy beef patty topped with smoky bacon, tangy BBQ sauce, cheddar cheese &amp; crispy onion straws.</p>
+            <div class="menu-card-footer">
+              <span class="menu-meta">🥓 <span data-en="Smoky" data-ar="مدخّن">Smoky</span></span>
+              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8: Spicy Jalapeño Burger -->
+        <article class="menu-card" data-category="burgers" data-price="9.49">
+          <div class="menu-card-img-wrap">
+            <img src="menu_burger.png" alt="Spicy Jalapeño Burger" loading="lazy" />
+            <span class="menu-badge" style="background:#e11d48;" data-en="🌶 Extra Hot" data-ar="🌶 حار جداً">🌶 Extra Hot</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3 data-en="Spicy Jalapeño Burger" data-ar="برغر الهالبينيو الحار">Spicy Jalapeño Burger</h3>
+              <span class="menu-price">$9.49</span>
+            </div>
+            <p data-en="A kicked-up beef patty with fresh jalapeños, pepper-jack cheese, chipotle mayo & crunchy lettuce." data-ar="برغر لحم بقري مع هالبينيو طازج، جبن كريمي حار، مايونيز تشيبوتلي وخس مقرمش.">A kicked-up beef patty with fresh jalapeños, pepper-jack cheese, chipotle mayo &amp; crunchy lettuce.</p>
+            <div class="menu-card-footer">
+              <span class="menu-meta">🌶 <span data-en="Spicy Level 3" data-ar="مستوى الحرارة ٣">Spicy Level 3</span></span>
+              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9: Crispy Chicken Strips -->
+        <article class="menu-card" data-category="sides" data-price="5.99">
+          <div class="menu-card-img-wrap">
+            <img src="menu_chicken.png" alt="Crispy Chicken Strips" loading="lazy" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3 data-en="Crispy Chicken Strips" data-ar="شرائح الدجاج المقرمشة">Crispy Chicken Strips</h3>
+              <span class="menu-price">$5.99</span>
+            </div>
+            <p data-en="5 hand-breaded chicken tenders fried golden, served with your choice of dipping sauce." data-ar="٥ شرائح دجاج مخبوزة يدوياً ومقلية ذهبية، تُقدَّم مع صلصة غمس من اختيارك.">5 hand-breaded chicken tenders fried golden, served with your choice of dipping sauce.</p>
+            <div class="menu-card-footer">
+              <span class="menu-meta">🍗 <span data-en="5 pieces" data-ar="٥ قطع">5 pieces</span></span>
+              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 10: Onion Rings -->
+        <article class="menu-card" data-category="sides" data-price="3.49">
+          <div class="menu-card-img-wrap">
+            <img src="menu_fries.png" alt="Onion Rings" loading="lazy" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3 data-en="Crunchy Onion Rings" data-ar="حلقات البصل المقرمشة">Crunchy Onion Rings</h3>
+              <span class="menu-price">$3.49</span>
+            </div>
+            <p data-en="Thick-cut sweet onion rings in a light, golden beer batter — impossibly crunchy every time." data-ar="حلقات بصل حلو مقطّعة ثخينة في عجينة بيرة ذهبية خفيفة — قرمشة لا تُصدّق في كل مرة.">Thick-cut sweet onion rings in a light, golden beer batter — impossibly crunchy every time.</p>
+            <div class="menu-card-footer">
+              <span class="menu-meta">🧅 <span data-en="Fan Favorite" data-ar="المفضّل">Fan Favorite</span></span>
+              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 11: Chocolate Milkshake -->
+        <article class="menu-card" data-category="drinks" data-price="4.49">
+          <div class="menu-card-img-wrap">
+            <img src="menu_drink.png" alt="Chocolate Milkshake" loading="lazy" />
+            <span class="menu-badge new-badge" data-en="New" data-ar="جديد">New</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3 data-en="Thick Chocolate Shake" data-ar="ميلك شيك شوكولا كثيف">Thick Chocolate Shake</h3>
+              <span class="menu-price">$4.49</span>
+            </div>
+            <p data-en="Hand-spun dark chocolate milkshake made with real cocoa and premium vanilla ice cream — extra thick." data-ar="ميلك شيك شوكولا داكنة مصنوع من الكاكاو الحقيقي وآيس كريم فانيليا فاخر — كثافة عالية.">Hand-spun dark chocolate milkshake made with real cocoa &amp; premium vanilla ice cream — extra thick.</p>
+            <div class="menu-card-footer">
+              <span class="menu-meta">🍫 <span data-en="Real cocoa" data-ar="كاكاو حقيقي">Real cocoa</span></span>
+              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 12: Mega Combo XL -->
+        <article class="menu-card" data-category="combos" data-price="16.99">
+          <div class="menu-card-img-wrap">
+            <img src="menu_combo.png" alt="Mega Combo XL" loading="lazy" />
+            <span class="menu-badge deal-badge" data-en="XL Deal" data-ar="عرض XL">XL Deal</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3 data-en="Mega Combo XL" data-ar="وجبة ميغا XL الكبيرة">Mega Combo XL</h3>
+              <span class="menu-price">$16.99</span>
+            </div>
+            <p data-en="Bacon BBQ Burger + XL Fries + Onion Rings + 32oz Drink. The biggest combo we offer." data-ar="برغر بيكون بي بي كيو + فريز XL + حلقات بصل + مشروب ٩٥٠ مل. أضخم وجبة لدينا.">Bacon BBQ Burger + XL Fries + Onion Rings + 32oz Drink. The biggest combo we offer.</p>
+            <div class="menu-card-footer">
+              <span class="menu-meta">💥 <span data-en="Save $4.00" data-ar="وفّر ٤$">Save $4.00</span></span>
+              <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 13: Midnight Snack Box -->
+        <article class="menu-card" data-category="combos" data-price="22.99">
+          <div class="menu-card-img-wrap">
+            <img src="menu_combo.png" alt="Midnight Snack Box" loading="lazy" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3 data-en="Midnight Snack Box" data-ar="صندوق سناك منتصف الليل">Midnight Snack Box</h3>
+              <span class="menu-price">$22.99</span>
+            </div>
+            <p data-en="2 Burgers + Chicken Strips + Onion Rings + 2 Shakes. Designed for late-night cravings." data-ar="٢ برغر + شرائح دجاج + حلقات بصل + ٢ ميلك شيك. مصمّم لولائم منتصف الليل.">2 Burgers + Chicken Strips + Onion Rings + 2 Shakes. Designed for late-night cravings.</p>
+            <div class="menu-card-footer">
+              <span class="menu-meta">🌙 <span data-en="Late Night" data-ar="ليلي">Late Night</span></span>
               <button class="add-btn" aria-label="Add to order" data-en="Add" data-ar="أضف">Add +</button>
             </div>
           </div>
@@ -542,6 +679,77 @@
 
   <!-- Toast notification -->
   <div class="toast" id="toast" aria-live="polite"></div>
+
+  <!-- ═══════════════════════════════ CART PANEL ═══════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Order Cart" aria-hidden="true">
+    <div class="cart-panel-header">
+      <h2 class="cart-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="20" height="20"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span data-en="Your Order" data-ar="طلبك">Your Order</span>
+      </h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Cart Items -->
+    <div class="cart-items-wrap" id="cartItemsWrap">
+      <div class="cart-empty" id="cartEmpty">
+        <span class="cart-empty-icon">🛒</span>
+        <p data-en="Your cart is empty. Add items from the menu!" data-ar="سلتك فارغة. أضف أصنافاً من القائمة!">Your cart is empty. Add items from the menu!</p>
+      </div>
+      <ul class="cart-items-list" id="cartItemsList"></ul>
+    </div>
+
+    <!-- Cart Total -->
+    <div class="cart-total-row" id="cartTotalRow">
+      <span data-en="Total" data-ar="الإجمالي">Total</span>
+      <span class="cart-total-amount" id="cartTotalAmount">$0.00</span>
+    </div>
+
+    <!-- Order Form -->
+    <div class="cart-form-wrap" id="cartFormWrap">
+      <h3 class="cart-form-title" data-en="Delivery Details" data-ar="تفاصيل التوصيل">Delivery Details</h3>
+
+      <form class="cart-form" id="orderForm" novalidate>
+        <!-- FormSubmit hidden config -->
+        <input type="hidden" name="_subject" value="New BurgerRush Order!" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="order_details" id="orderDetailsField" value="" />
+
+        <div class="cart-field">
+          <label for="customerName" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+          <input type="text" id="customerName" name="Full Name" placeholder="John Smith" autocomplete="name" />
+          <span class="field-err" id="nameErr" data-en="Name is required" data-ar="الاسم مطلوب">Name is required</span>
+        </div>
+
+        <div class="cart-field">
+          <label for="customerPhone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+          <input type="tel" id="customerPhone" name="Phone Number" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+          <span class="field-err" id="phoneErr" data-en="Phone is required" data-ar="رقم الهاتف مطلوب">Phone is required</span>
+        </div>
+
+        <div class="cart-field">
+          <label for="customerAddress" data-en="Delivery Address" data-ar="عنوان التوصيل">Delivery Address</label>
+          <textarea id="customerAddress" name="Delivery Address" rows="2" placeholder="123 Main St, New York, NY 10001" autocomplete="street-address"></textarea>
+          <span class="field-err" id="addressErr" data-en="Address is required" data-ar="العنوان مطلوب">Address is required</span>
+        </div>
+
+        <!-- Success / Error messages -->
+        <div class="cart-msg cart-msg-success" id="cartSuccess" aria-live="polite">
+          <span>✅</span>
+          <span data-en="Order submitted successfully! We'll contact you shortly." data-ar="تم إرسال طلبك بنجاح! سنتواصل معك قريباً.">Order submitted successfully! We'll contact you shortly.</span>
+        </div>
+        <div class="cart-msg cart-msg-error" id="cartError" aria-live="polite">
+          <span>❌</span>
+          <span data-en="Something went wrong. Please call us directly." data-ar="حدث خطأ ما. يرجى الاتصال بنا مباشرة.">Something went wrong. Please call us directly.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary cart-submit" id="cartSubmit" data-en="Confirm Order" data-ar="تأكيد الطلب">Confirm Order</button>
+      </form>
+    </div>
+  </aside>
 
   <script src="script.js"></script>
 </body>
