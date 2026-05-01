@@ -458,6 +458,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin: 0 auto;
   padding: calc(var(--nav-h) + 4rem) var(--space-lg) var(--space-2xl);
   max-width: 720px;
+  text-align: center;
 }
 
 .hero-badge {
@@ -474,15 +475,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 1.5rem;
   backdrop-filter: blur(8px);
   animation: fadeUp 0.6s ease both;
+  
 }
 
 .hero-title {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2rem, 7vw, 5rem);
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.09;
   letter-spacing: -0.04em;
   color: #fff;
-  margin-bottom: 1.25rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
   animation: fadeUp 0.6s 0.1s ease both;
 }
 
@@ -490,6 +493,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: block;
   color: var(--accent);
   text-shadow: 0 0 60px rgba(255,69,0,0.5);
+  
 }
 
 .hero-sub {
@@ -507,16 +511,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero-ctas {
   display: flex;
+  justify-content: center; /* توسيط أفقي */
+  align-items: center; /* توسيط رأسي */
   gap: 1rem;
   flex-wrap: wrap;
+  width: 100%; /* ياخد عرض كامل */
+  margin: 0 auto; /* توسيط البلوك نفسه */
   animation: fadeUp 0.6s 0.3s ease both;
 }
 
 .hero-stats {
   display: flex;
+  justify-content: center; /* توسيط الإحصائيات */
   align-items: center;
   gap: 2rem;
-  margin-top: 3.5rem;
+  margin: 3.5rem auto; /* توسيط البلوك */
+  width: 100%;
+  flex-wrap: wrap; /* مناسب للموبايل */
+  text-align: center;
   animation: fadeUp 0.6s 0.4s ease both;
 }
 
